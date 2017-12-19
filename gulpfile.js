@@ -47,7 +47,10 @@ gulp.task('pegjs-basic', function (done) {
 
     if (err) { return done(err); }
     data = data.replace(regex, '');
-    code = PEG.buildParser(data)._source;
+    code = PEG.generate(data, { 
+      cache: true,
+      output: 'source',
+    });
     code = packageJs(code);
     fs.writeFile('src/parser.peg.js', code, function (err) {
       done(err);
