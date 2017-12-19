@@ -1,7 +1,7 @@
 components
 build
-src/parser.peg.js
-src/parser-extended.peg.js
+# src/parser.peg.js
+# src/parser-extended.peg.js
 
 # Created by http://www.gitignore.io
 
